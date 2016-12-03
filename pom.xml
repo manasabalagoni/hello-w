@@ -8,7 +8,40 @@
     <packaging>jar</packaging>
 
     <name>hello-world-cicd</name>
+    <description>Simple Java Hello Word project to showcase how to do CI/CD with OpenSource projects</description>
     <url>https://github.com/dikhan/hello-world-cicd</url>
+    <inceptionYear>2016</inceptionYear>
+    <organization />
+
+    <licenses>
+        <license>
+            <name>The MIT License</name>
+            <url>https://github.com/dikhan/pagerduty-client/master/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Daniel I. Khan Ramiro</name>
+            <email>di.khan.r@gmail.com</email>
+            <timezone>GMT</timezone>
+            <url>https://github.com/dikhan</url>
+            <roles>
+                <role>Administrator</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <mailingLists />
+    <prerequisites />
+    <modules />
+
+    <scm>
+        <connection>scm:git:git@github.com:dikhan/hello-world-cicd.git</connection>
+        <developerConnection>scm:git:git@github.com:dikhan/hello-world-cicd.git</developerConnection>
+        <url>git@github.com:dikhan/hello-world-cicd.git</url>
+    </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
