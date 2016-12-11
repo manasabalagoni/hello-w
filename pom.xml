@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.dikhan</groupId>
@@ -41,19 +40,18 @@
         <connection>scm:git:https://github.com/dikhan/hello-world-cicd.git</connection>
         <developerConnection>scm:git:https://github.com/dikhan/hello-world-cicd.git</developerConnection>
         <url>scm:git:https://github.com/dikhan/hello-world-cicd.git</url>
-    </scm>
+  </scm>
 
+    <!-- Distribution Management and Authentication -->
     <distributionManagement>
-        <repository>
-            <id>fakerepo</id>
-            <name>Local file system</name>
-            <url>/Users/dikhanr/Desktop/fakeRepo/repo</url>
-        </repository>
         <snapshotRepository>
-            <id>fakesnapshotrepo</id>
-            <name>Local file system</name>
-            <url>/Users/dikhanr/Desktop/fakeRepo/snapshots</url>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
         </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
     </distributionManagement>
 
     <properties>
