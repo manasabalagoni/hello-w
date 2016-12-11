@@ -43,6 +43,19 @@
         <url>git@github.com:dikhan/hello-world-cicd.git</url>
     </scm>
 
+    <distributionManagement>
+        <repository>
+            <id>fakerepo</id>
+            <name>Local file system</name>
+            <url>/Users/dikhanr/Desktop/fakeRepo/repo</url>
+        </repository>
+        <snapshotRepository>
+            <id>fakesnapshotrepo</id>
+            <name>Local file system</name>
+            <url>/Users/dikhanr/Desktop/fakeRepo/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
