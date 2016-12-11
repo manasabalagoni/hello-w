@@ -38,9 +38,9 @@
     <modules />
 
     <scm>
-        <connection>scm:git:git@github.com:dikhan/hello-world-cicd.git</connection>
-        <developerConnection>scm:git:git@github.com:dikhan/hello-world-cicd.git</developerConnection>
-        <url>git@github.com:dikhan/hello-world-cicd.git</url>
+        <connection>scm:git:https://github.com/dikhan/hello-world-cicd.git</connection>
+        <developerConnection>scm:git:https://github.com/dikhan/hello-world-cicd.git</developerConnection>
+        <url>scm:git:https://github.com/dikhan/hello-world-cicd.git</url>
     </scm>
 
     <distributionManagement>
