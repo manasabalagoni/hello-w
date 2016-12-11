@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.dikhan</groupId>
@@ -10,7 +11,7 @@
     <description>Simple Java Hello Word project to showcase how to do CI/CD with OpenSource projects</description>
     <url>https://github.com/dikhan/hello-world-cicd</url>
     <inceptionYear>2016</inceptionYear>
-    <organization />
+    <organization/>
 
     <licenses>
         <license>
@@ -32,15 +33,15 @@
         </developer>
     </developers>
 
-    <mailingLists />
-    <prerequisites />
-    <modules />
+    <mailingLists/>
+    <prerequisites/>
+    <modules/>
 
     <scm>
         <connection>scm:git:https://github.com/dikhan/hello-world-cicd.git</connection>
         <developerConnection>scm:git:https://github.com/dikhan/hello-world-cicd.git</developerConnection>
         <url>scm:git:https://github.com/dikhan/hello-world-cicd.git</url>
-  </scm>
+    </scm>
 
     <!-- Distribution Management and Authentication -->
     <distributionManagement>
