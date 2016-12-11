@@ -67,6 +67,24 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+
+            <!-- The Maven Release Plugin can be used to automate the changes to the Maven POM files, sanity checks, the SCM operations required and the actual deployment execution. -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>2.5.3</version>
+                <configuration>
+                    <stagingRepository>https://oss.sonatype.org/content/repositories/snapshots</stagingRepository>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                    <useReleaseProfile>false</useReleaseProfile>
+                    <releaseProfiles>release</releaseProfiles>
+                    <goals>deploy</goals>
+                    <checkModificationExcludes>
+                        <checkModificationExclude>**/pom.xml</checkModificationExclude>
+                    </checkModificationExcludes>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 
