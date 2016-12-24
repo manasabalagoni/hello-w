@@ -1,6 +1,6 @@
 language: java
 jdk:
-- oraclejdk8
+  - oraclejdk8
 env:
   global:
   - secure: DkYtFwdk9GBCrK609VcMxNbatLXDyHrZbmvBYpPH4oSr8q6SJFPhheavMM5mPJNR0eyAbf0O+R9mqfgSJDArZ8J15jb3tZ2oXaA1nupuef89FnL8a2dLO3kWEJqpXX0n7cetQ57VlkkemnQJyYXrqtlLPDDxwTtom/9ZbuF2eNsgjWEs+VG+oEtchs4Z3TqtdTKXdyROfLKRjP97ENLFAMRlm8QYqSaEiOzkKDnej+mosLmscRZsFR4aeGk48VfVJP4wqsjjpnIsJA1MMdVU6sDufXnNQmua0l2ey95qh1ppBlzG3G+/g+66iiMNqEOglwI3928JKRe45moj4I6cErjWPUaAM8unt4h0+jxQyBihkbATz/hbPclwsDuFSC0OY/R4BzftikEltkOCIKd/uhCawd9KM2pYKrpCoTITEF3vQPgOk9Sb+Dqf4klmiEXqPhFlEtg+StMQqhKyNB9AhtEi4EVhhXY8jlFKtkZQ7RC1h6duYRUToefWBV5t8Hv0AtFqrYNFp1tPcITqhvWz2Q9vQpjUzaiqOyHQK3WXSXEqh9ENTxxjalhDJ5tz9Vwyn2BMWv3KAe1CiOC8PZkObgJzSLJPqMuJveHzsuSqXWQBLzzA7aoHuM5xcBOaMgk3IQWt5eg+2TEUU0OmXmjqvCkPWzXOHx3fI6/Hp29oYGo=
@@ -14,12 +14,12 @@ branches:
   only:
   - master
 install:
-- export TRAVIS_COMMIT_DESCRIPTION=`git log -n 1`
+  - mvn clean install
+  - export TRAVIS_COMMIT_DESCRIPTION=`git log -n 1`
 script:
-- chmod +x ./travis-ci/before-deploy.sh ./travis-ci/deploy.sh
-  || travis_terminate 1;
-- ./travis-ci/before-deploy.sh;
-- ./travis-ci/deploy.sh;
+  - chmod +x ./travis-ci/before-deploy.sh ./travis-ci/deploy.sh || travis_terminate 1;
+  - ./travis-ci/before-deploy.sh;
+  - ./travis-ci/deploy.sh;
 cache:
   directories:
   - ~/.m2/repository

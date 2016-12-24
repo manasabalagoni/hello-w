@@ -10,7 +10,7 @@ echo $TRAVIS_EVENT_TYPE;
 
 if [[ "$TRAVIS_COMMIT_DESCRIPTION" != *"maven-release-plugin"* ]];then
 
-    if [ "$TRAVIS_BRANCH" == "master" ] || [ "$TRAVIS_EVENT_TYPE" == "pull_request" ];then
+    if [ "$TRAVIS_BRANCH" == "master" ];then
         openssl aes-256-cbc -K $encrypted_75d76ac7d458_key -iv $encrypted_75d76ac7d458_iv -in travis-ci/keys/codesigning.asc.enc -out travis-ci/keys/signingkey.asc -d
         gpg --yes --batch --fast-import travis-ci/keys/signingkey.asc  || { echo $0: mvn failed; exit 1; }
     fi
