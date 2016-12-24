@@ -93,7 +93,11 @@
                     <releaseProfiles>release</releaseProfiles>
                     <goals>deploy</goals>
                     <checkModificationExcludes>
-                        <checkModificationExclude>*</checkModificationExclude>
+                        <checkModificationExclude>travis-ci/*.sh</checkModificationExclude>
+                        <checkModificationExclude>**/*.java</checkModificationExclude>
+                        <checkModificationExclude>**/*.md</checkModificationExclude>
+                        <checkModificationExclude>**/pom.xml</checkModificationExclude>
+                        <checkModificationExclude>.travis.yml</checkModificationExclude>
                     </checkModificationExcludes>
                 </configuration>
             </plugin>
