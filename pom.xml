@@ -40,7 +40,7 @@
     <scm>
         <connection>scm:git:https://github.com/dikhan/hello-world-cicd.git</connection>
         <developerConnection>scm:git:https://github.com/dikhan/hello-world-cicd.git</developerConnection>
-        <url>scm:git:https://github.com/dikhan/hello-world-cicd.git</url>
+        <url>https://github.com/dikhan/hello-world-cicd.git</url>
     </scm>
 
     <!-- Distribution Management and Authentication -->
@@ -86,7 +86,8 @@
                 <artifactId>maven-release-plugin</artifactId>
                 <version>2.5.3</version>
                 <configuration>
-                    <stagingRepository>https://oss.sonatype.org/content/repositories/snapshots</stagingRepository>
+                    <connectionUrl>scm:git:https://github.com/dikhan/hello-world-cicd.git</connectionUrl>
+                    <stagingRepository>ossrh::default::https://oss.sonatype.org/content/repositories/snapshots</stagingRepository>
                     <autoVersionSubmodules>true</autoVersionSubmodules>
                     <useReleaseProfile>false</useReleaseProfile>
                     <releaseProfiles>release</releaseProfiles>
