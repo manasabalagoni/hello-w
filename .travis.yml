@@ -16,12 +16,10 @@ branches:
 install:
 - export TRAVIS_COMMIT_DESCRIPTION=`git log -n 1`
 script:
-- mvn test -P !build-extras -B  || travis_terminate 1;
-- chmod +x ./travis-ci/before-deploy.sh ./travis-ci/deploy.sh ./travis-ci/cleanup.sh
+- chmod +x ./travis-ci/before-deploy.sh ./travis-ci/deploy.sh
   || travis_terminate 1;
 - ./travis-ci/before-deploy.sh;
 - ./travis-ci/deploy.sh;
-- ./travis-ci/cleanup.sh;
 cache:
   directories:
   - ~/.m2/repository
