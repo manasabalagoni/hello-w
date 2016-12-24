@@ -12,10 +12,12 @@ echo $TRAVIS_PULL_REQUEST_BRANCH;
 echo $TRAVIS_PULL_REQUEST;
 
 if [[ "$TRAVIS_COMMIT_DESCRIPTION" != *"maven-release-plugin"* ]];then
-    if [ "$TRAVIS_BRANCH" == "master" ];then
+
+    if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST_BRANCH" == "" ];then
         mvn --batch-mode release:clean release:prepare -Dusername=$GITHUB_USERNAME -Dpassword=$GITHUB_PASSWORD
         mvn release:perform --settings travis-ci/settings.xml
     fi
+
 else
   echo "deploy: Not running deploy mvn commands due to maven-release-plugin auto commit - this is just for preparation for dev/releases";
 fi
